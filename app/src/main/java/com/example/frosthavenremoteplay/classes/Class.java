@@ -34,9 +34,15 @@ public class Class {
     private int HandSize;
     private List<Mastery> Masteries;
     private List<Integer> AvailablePerks;
+    @DatabaseField (columnName = "IsLocked")
+    private boolean IsLocked;
+    @DatabaseField (columnName = "LockedArt")
+    private String LockedArt;
+    @DatabaseField (columnName = "UnlockedArt")
+    private String UnlockedArt;
 
     public Class(String className, int levelOneHitPoints, int levelTwoHitPoints, int levelThreeHitPoints, int levelFourHitPoints, int levelFiveHitPoints, int levelSixHitPoints,
-                 int levelSevenHitPoints, int levelEightHitPoints, int levelNineHitPoints, int handSize){
+                 int levelSevenHitPoints, int levelEightHitPoints, int levelNineHitPoints, int handSize, boolean isLocked, String lockedArt, String unlockedArt){
         ClassName = className;
         LevelOneHitPoints = levelOneHitPoints;
         LevelTwoHitPoints = levelTwoHitPoints;
@@ -48,6 +54,9 @@ public class Class {
         LevelEightHitPoints = levelEightHitPoints;
         LevelNineHitPoints = levelNineHitPoints;
         HandSize = handSize;
+        IsLocked = isLocked;
+        LockedArt = lockedArt;
+        UnlockedArt = unlockedArt;
     }
 
     public int getClassId() {
@@ -160,5 +169,29 @@ public class Class {
 
     public void setMasteries(List<Mastery> masteries) {
         Masteries = masteries;
+    }
+
+    public boolean isLocked() {
+        return IsLocked;
+    }
+
+    public void setLocked(boolean locked) {
+        IsLocked = locked;
+    }
+
+    public String getLockedArt() {
+        return LockedArt;
+    }
+
+    public void setLockedArt(String lockedArt) {
+        LockedArt = lockedArt;
+    }
+
+    public String getUnlockedArt() {
+        return UnlockedArt;
+    }
+
+    public void setUnlockedArt(String unlockedArt) {
+        UnlockedArt = unlockedArt;
     }
 }

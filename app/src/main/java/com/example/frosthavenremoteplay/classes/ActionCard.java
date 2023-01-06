@@ -20,7 +20,7 @@ public class ActionCard {
 
     public ActionCard(String name, int classId, int cardLevel){
         Name = name;
-        ImagePath = "__"+name.toLowerCase(Locale.ROOT).replace(" ", "")+".png";
+        ImagePath = "__"+name.toLowerCase(Locale.ROOT).replace(" ", "");
         ClassId = classId;
         CardLevel = cardLevel;
     }

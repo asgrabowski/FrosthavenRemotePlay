@@ -21,7 +21,7 @@ public class ModifierCard {
     public ModifierCard(String name, int perkId){
         Name = name;
         PerkId = perkId;
-        ImagePath = name.toLowerCase(Locale.ROOT).replace(" ", "")+".png";
+        ImagePath = name.toLowerCase(Locale.ROOT).replace(" ", "");
         ShuffleAtEndOfTurn = name.equals("Miss") || name.equals("Crit");
     }
 
