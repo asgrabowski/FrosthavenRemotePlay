@@ -283,7 +283,8 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     public void addAllClasses() throws SQLException {
         TableUtils.clearTable(_connectionSource, Class.class);
         List<Class> classes = new ArrayList<>();
-        classes.add(new Class("Blink Blade", 8, 9, 11, 12, 14, 15, 17, 18, 20, 10, false, null, "bb_unlocked"));
+        classes.add(new Class(ClassHelper.BLINK_BLADE, 8, 9, 11, 12, 14, 15, 17, 18, 20, 10, false, null, "bb_unlocked"));
+        classes.add(new Class(ClassHelper.BANNER_SPEAR, 10, 12, 14, 16, 18, 20, 22, 24, 26, 10, false, null, "bs_unlocked"));
         addClasses(classes);
     }
     public void addAllActionCards() throws SQLException {

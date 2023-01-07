@@ -26,8 +26,10 @@ public class Perk {
     @DatabaseField(columnName = "TimesRepeatable")
     private int TimesRepeatable;
     private int TimesTaken; //Determined by number of times perk id appears in perk string
+    @DatabaseField(columnName = "PerkNumber")
+    private int PerkNumber;
 
-    public Perk(int classId, String description, int negativeTwoChangeCount, int negativeOneChangeCount, int zeroChangeCount, int positiveOneChangeCount, int positiveTwoChangeCount, int perkPointsRequired, int timesRepeatable){
+    public Perk(int classId, String description, int negativeTwoChangeCount, int negativeOneChangeCount, int zeroChangeCount, int positiveOneChangeCount, int positiveTwoChangeCount, int perkPointsRequired, int timesRepeatable, int perkNumber){
         ClassId = classId;
         Description = description;
         NegativeOneChangeCount = negativeOneChangeCount;
@@ -37,6 +39,7 @@ public class Perk {
         PositiveTwoChangeCount = positiveTwoChangeCount;
         PerkPointsRequired = perkPointsRequired;
         TimesRepeatable = timesRepeatable;
+        PerkNumber = perkNumber;
     }
 
     public int getPerkId() {
@@ -125,5 +128,13 @@ public class Perk {
 
     public void setTimesTaken(int timesTaken) {
         TimesTaken = timesTaken;
+    }
+
+    public int getPerkNumber() {
+        return PerkNumber;
+    }
+
+    public void setPerkNumber(int perkNumber) {
+        PerkNumber = perkNumber;
     }
 }
